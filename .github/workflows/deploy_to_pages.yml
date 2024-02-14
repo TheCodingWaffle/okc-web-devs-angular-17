@@ -27,4 +27,6 @@ jobs:
         working-directory: .
 
       - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ng deploy
