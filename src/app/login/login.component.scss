@@ -1,0 +1,11 @@
+.okc-lc-button-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    & button {
+        width: 75px;
+        background: #016b80;
+        color: white;
+    }
+}
