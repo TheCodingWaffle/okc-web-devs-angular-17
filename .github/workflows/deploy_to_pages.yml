@@ -1,0 +1,30 @@
+name: Deploy To GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code # Checks out the code in this repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js # Setup the node environment in the temp Ubuntu instance
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Angular CLI # Install Angular CLI so project sripts will run
+        run: npm install -g @angular/cli > /dev/null
+
+      - name: Install Deps
+        run: npm install
+        working-directory: .
+
+      - name: Deploy
+        run: ng deploy
