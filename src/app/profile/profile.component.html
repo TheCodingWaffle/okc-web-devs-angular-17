@@ -1,1 +1,36 @@
-<p>profile works!</p>
+<div class="okc-pc-page">
+  <div class="okc-pc-person-container">
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Back"
+      (click)="goBack()"
+      class="okc-pc-back"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <img src="{{ state().loggedInPersonImageUrl }}" />
+    <div class="okc-pc-person-details">
+      <mat-list role="list">
+        <mat-list-item>
+          Name: {{ state().loggedInPerson?.name }}
+        </mat-list-item>
+        <mat-list-item>
+          Height: {{ state().loggedInPerson?.height }}
+        </mat-list-item>
+        <mat-list-item>
+          Hair Color: {{ state().loggedInPerson?.hair_color }}
+        </mat-list-item>
+        <mat-list-item>
+          Eye Color: {{ state().loggedInPerson?.eye_color }}
+        </mat-list-item>
+        <mat-list-item>
+          Birth Year: {{ state().loggedInPerson?.birth_year }}
+        </mat-list-item>
+        <mat-list-item>
+          Gender: {{ state().loggedInPerson?.gender }}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

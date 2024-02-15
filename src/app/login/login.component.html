@@ -1,4 +1,45 @@
-<div class="okc-lc-button-bar">
-  <button (click)="login('vincent')">Vincent</button>
-  <button (click)="login('obi-wan')">Obi-Wan</button>
+<div class="okc-lc-page">
+  <form class="okc-lc-form" (ngSubmit)="onSubmit()">
+    @if (state().loading) {
+    <mat-spinner></mat-spinner>
+    }@else {
+    <div class="okc-lc-form-title">Login</div>
+    <mat-form-field class="okc-lc-form-item">
+      <mat-label>People</mat-label>
+      <input
+        matInput
+        aria-label="People"
+        [matAutocomplete]="auto"
+        [formControl]="personControl"
+      />
+      @if (personControl.value) {
+      <button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="personControl.setValue('')"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+      }
+      <mat-autocomplete #auto="matAutocomplete">
+        @for (person of filteredPeople(); track person) {
+        <mat-option [value]="person.name">
+          <span>{{ person.name }}</span>
+        </mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <button
+      mat-flat-button
+      color="primary"
+      type="submit"
+      [disabled]="personControl.invalid"
+      class="okc-lc-form-item"
+    >
+      Login
+    </button>
+    }
+  </form>
 </div>

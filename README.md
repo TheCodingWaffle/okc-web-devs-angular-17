@@ -1,27 +1,29 @@
-# OkcWebDevsAngular17
+# OKCWebDevs Angular 17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+This project highlights some of the new features with Angular v17:
 
-## Development server
+- [Signals](https://angular.dev/guide/signals)
+- [Built-in control flow](https://angular.dev/guide/templates/control-flow)
+- [Stand-alone Components](https://angular.io/guide/standalone-components)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+A great reference to so visit the shiny new [Angular Documentation site](https://angular.dev/). It's got easy to understand tutorials and an online playground to "try before you buy".
 
-## Code scaffolding
+## Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project has CICD setup to deploy to a GitHub Pages site found [HERE](https://thecodingwaffle.github.io/okc-web-devs-angular-17)
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone the project, open it in your choice of IDE, and follow the below commands to get it up and running.
 
-## Running unit tests
+> Install the dependencies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  npm install
+```
 
-## Running end-to-end tests
+> Run Project
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  npm run start
+```

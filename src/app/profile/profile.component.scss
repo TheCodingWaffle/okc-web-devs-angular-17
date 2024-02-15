@@ -1,0 +1,46 @@
+.okc-pc-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/backgrounds/login-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    >.okc-pc-person-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        height: 21rem;
+        width: auto;
+        background: white;
+        justify-content: flex-start;
+        border-radius: 4px;
+        box-shadow: 0px 0px 7px 0px rgba(150, 150, 150, 0.3);
+        overflow: hidden;
+        padding-right: 1rem;
+
+        >.okc-pc-back {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 100;
+        }
+
+
+        & img {
+            width: auto;
+            height: 100%;
+        }
+
+        >.okc-pc-person-details {
+            height: 100%;
+            width: 15rem;
+        }
+    }
+}
